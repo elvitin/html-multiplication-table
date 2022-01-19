@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Multiplication table with document.write()</title>
+
+    <!-- style coming soon -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+</head>
+
+<body>
+    <script>
+        document.write('<table border="1">');
+        document.write('<tbody>');
+
+        let primaryNumber;
+        let secundaryNumber = 1;
+
+        while (secundaryNumber <= 10) {
+            primaryNumber = 1;
+            document.write('<tr>');
+            while (primaryNumber <= 10) {
+                document.write(`<td>${primaryNumber} x ${secundaryNumber} = ${primaryNumber * secundaryNumber}</td>`);
+                primaryNumber++;
+            }
+            document.write('</tr>');
+            secundaryNumber++;
+        }
+        document.write('</tbody');
+        document.write('</table>');
+    </script>
+</body>
+
+</html>
